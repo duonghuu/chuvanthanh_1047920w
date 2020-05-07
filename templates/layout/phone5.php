@@ -17,7 +17,7 @@
 </div>
 <style>
     .hotline-fixed-6.bottom_left {
-        bottom: 20px;
+        bottom: 50px;
         left: 20px;
     }
     .call-now {

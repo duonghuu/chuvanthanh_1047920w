@@ -157,7 +157,10 @@
 @mixin setIdxTitleSize(){
   .idx-tit {
       h4 {
-          @include font-size(36);
+        @include font-size(26);
+        @include media("<=mobile"){
+          @include font-size(16);
+        };
       }
   }
   @content;
@@ -205,29 +208,43 @@
 }
 /*========= HEADER ===============*/
 @mixin setHeaderCenter(){
-  #search{
+  .hd-bg{
+    .hd-top__left {
+      p{
+        &:first-child{
+          display: none;
+        }
+      }
+    }
+    .hd-bot__left {
+      @include media("<=mobile"){
+        img{
+          height: 80px;
+        }
+      };
+      div{
+        @include media("<=mobile"){
+          margin: 0 7px;
+        };
+        h5{
+          @include font-size(26);
+          @include media("<=mobile"){
+                      @include font-size(16);
+                    };
+        }
+        p{
+          @include font-size(20);
+          @include media("<=mobile"){
+            @include font-size(10);
+          };
+        }
+      }
+    }
+  } 
+  .hd-hotline{
     display: none;
   }
   @include media("<=mobile"){
-    .hd-flex{
-      @include flex-wrap(wrap);
-      padding-bottom: 10px;
-      .logo{
-        width: 100%;
-        .logo-text {
-          h2{
-            @include font-size(20);
-          }
-          span{
-            @include font-size(16);
-            padding-left: 0;
-          }
-        }
-      }
-      .giohang_fix{
-        margin-left: 0;
-      }
-    }
   };
   @content;
 }
@@ -241,10 +258,10 @@
     background-color: $bg-valak;
   }
   .toolbar{
-    background-color: $bg-valak !important; 
+    background-color: $theme-color !important; 
   }
   .logo_valak{
-    background-color: $bg-valak !important; 
+    background-color: $theme-color !important; 
   }
   .hd-bg{
     display: block;
@@ -314,9 +331,11 @@
 }
 /*========= PRODUCT ===============*/
 @mixin setProductColumnMobile($p_col: 6, $p_gutter: 0){
-  .pr-box,.spnoibat-flex .product-grid .pr-box,.sptieubieu-flex .product-grid 
-  .pr-box, .spnoibat-bg .danhmuc-sanpham .danhmuc-sanpham-box .product-grid .pr-box{
+  .pr-box, .tienich-item{
     @include grid-col($col: $p_col, $grid-columns: 12, $col-offset: null, $gutter: $p_gutter);  
+    @include media("<=mobile"){
+            margin-bottom: 1em;
+          };
   }
   @content;
 }
@@ -375,11 +394,7 @@
   #footer {
     .ft-flex {
       @include flex-wrap(wrap);
-      .ft-info{
-        width: 100%;
-        margin-bottom: 1em;
-      }
-      .ft-social, .ft-dknt  {
+      .ft-col-left, .ft-info  {
         width: 49%;
         margin-bottom: 1em;
         @include media('<=mobile'){

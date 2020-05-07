@@ -36,21 +36,22 @@ $font-title             : $font-roboto;
 $font-text              : $font-roboto;
 $font-awesome           : 'Font Awesome 5 Free';
 $font-second            : 'Arial';
+$product-ratio          : percentage(440/600);
 /* ======================== HEADER ======================== */
 $bg-header-top          : #01b1f2;
 $bg-header              : #f9f9f9;
 $bg-breadcrumb           : #f7f6f6;
 /* ======================== MENU ======================== */
 $font-menu              : $font-roboto;
-$color-menu-hover       : #ff0;
-$bg-menu                : #01b1f2;
-$bg-valak               : #01b1f2;
+$color-menu-hover       : #fff;
+$bg-menu                : #ffcb0e;
+$bg-valak               : #ffcb0e;
 $bg-menu-item           : transparent;
-$bg-menu-item-hover     : transparent;
+$bg-menu-item-hover     : #552213;
 /* ======================== FOOTER ======================== */
-$bg-copyright       : transparent;
+$bg-copyright       : #552213;
 $bg-footer          : #01b1f2;
-$theme-color        : #01b1f2;
+$theme-color        : #552213;
 $height-map         : 400 * 1px;
 /* ======================== URL ======================== */
 $font-url           : 'css/fonts/';

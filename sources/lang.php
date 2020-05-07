@@ -1,7 +1,9 @@
 <?php
 //------------ Menu -----------------
+@define ('_tiennghivanoithat','Tiện nghi và nội thất');
 @define ('_xindungspamwebsitechungtoi','Xin đừng spam website chúng tôi!');
 @define ('_visaochochungtoi','Vì sao nên chọn dịch vụ Mỹ Như');
+@define ('_giathue','Giá thuê');
 @define ('_daily','Đại lý');
 @define ('_timkiem','Tìm kiếm');
 @define ('_congtytuvanbds','Công ty tư vấn bất động sản');
@@ -125,7 +127,7 @@
 @define ('_nhahang','Nhà hàng');
 @define ('_trangchu','Trang chủ');
 @define ('_gioithieu','Giới thiệu');
-@define ('_sanpham','Sản phẩm');
+@define ('_sanpham','Cho thuê');
 @define ('_tintuc','Tin tức');
 @define ('_tuyensinh','Tuyển sinh');
 @define ('_sukien','Sự kiện');

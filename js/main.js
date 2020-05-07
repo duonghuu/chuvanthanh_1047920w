@@ -239,17 +239,17 @@ $(document).ready(function() {
     //       'top': vitri + 'px'
     //     })
     //   });
-    // $(window).scroll(function(){
-    //   var cach_top = $(window).scrollTop();
-    //   var heaigt_header = $('.hd-bg').height();
-    //   if(cach_top >= heaigt_header){
-    //     $('.nav-bg').css({position: 'fixed', top: '0px', zIndex:99999});
-    //     $('.nav-bg').addClass('fixed');
-    //   }else{
-    //     $('.nav-bg').css({position: 'relative', top: 'auto'});
-    //     $('.nav-bg').removeClass('fixed');
-    //   }
-    // });
+    $(window).scroll(function(){
+      var cach_top = $(window).scrollTop();
+      var heaigt_header = $('.hd-bg').height();
+      if(cach_top >= heaigt_header){
+        $('.nav-bg').css({position: 'fixed', top: '0px', zIndex:99999});
+        $('.nav-bg').addClass('fixed');
+      }else{
+        $('.nav-bg').css({position: 'relative', top: 'auto'});
+        $('.nav-bg').removeClass('fixed');
+      }
+    });
   }
   
 });
@@ -325,6 +325,39 @@ $('.doitac-main').on({
           ]
       });
 
+  $('.main_manu_valak ul li').each(function(index, el) {
+    if($(this).children("ul").length) {
+      $(this).prepend('<div class="btn_expand_menu_valak"></div>');
+    }
+  });
+  $(document).on('click', '#humber_valak', function(event) {
+    event.preventDefault();
+    $("#valak_openmmenu").addClass('expand_menu');
+  });
+  $(document).on('click', '#close_valak', function(event) {
+    event.preventDefault();
+    $("#valak_openmmenu").removeClass('expand_menu');
+  });
+  $(document).on('click', '.btn_expand_menu_valak', function(event) {
+    event.preventDefault();
+    if($(this).hasClass('more')) {
+      $(this).removeClass('more');
+    }
+    else {
+      $(this).addClass('more');
+    }
+    $(this).parent('li').children('ul').toggle();
+  });
+  $(window).scroll(function() {
+    if($(window).scrollTop() >= $(".hd-bg").height()) 
+    {
+      $("#valak_mmenu").css({position:"fixed",left:'0px',right:'0px',top:'0px',zIndex:'999'});
+    }
+    else
+    {
+      $("#valak_mmenu").css({position:"relative"});
+    }
+  });
 function doEnter(evt){
     var key;
     if(evt.keyCode == 13 || evt.which == 13){
@@ -364,6 +397,21 @@ $(document).ready(function() {
     }else{
       $('#search').addClass('hien');
     }
+  });
+});
+$(document).ready(function() {
+  $('#submit_nhantin').click(function(){
+    if(isEmpty($('#email_nhantin').val(), lang_nhapemailcuaban))
+    {
+      $('#email_nhantin').focus();
+      return false;
+    }
+    if(isEmail($('#email_nhantin').val(), lang_emailkhonghople))
+    {
+      $('#email_nhantin').focus();
+      return false;
+    }
+    document.frm_dknt.submit(); 
   });
 });
 $(document).ready(function() {

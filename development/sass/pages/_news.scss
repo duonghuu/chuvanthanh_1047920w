@@ -22,7 +22,7 @@
                 }
                 .desc{
                     @include setFont(14px, #333);
-                    @include line-clamp(14px,1.5,4,false);
+                    @include line-clamp(14px,1.5,4,true);
                     text-align: justify;
                     text-align-last: left;
                 }
@@ -67,7 +67,7 @@
 }
 .news-tpl-grid{
     @include grid($display: flex, $flex-wrap: wrap, $gutter: 2%);
-    @extend %news-tpl-grid-horizontal;
+    @extend %news-tpl-grid-verticle;
 }
 .othernews{
     h5{

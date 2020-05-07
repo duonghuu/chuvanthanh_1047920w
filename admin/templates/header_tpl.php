@@ -1,5 +1,5 @@
 <?php
-$dem_datban = get_result("select count(id) as dem from #_lienhe where type='datban' and hienthi=0");
+// $dem_datban = get_result("select count(id) as dem from #_lienhe where type='datban' and hienthi=0");
 $dem_thu = get_result("select count(id) as dem from #_lienhe where type='lienhe' and hienthi=0");
 // $dem_user = get_result("select count(id) as dem from #_user where active=0");
 ?>
@@ -8,7 +8,8 @@ $dem_thu = get_result("select count(id) as dem from #_lienhe where type='lienhe'
     <div class="welcome"><a href="#" title=""><img src="images/userPic.png" alt="" /></a><span>Xin chào, <?=$_SESSION['login_admin']['username']?>!</span></div>
     <div class="userNav">
         <ul>
-            <li><a href="http://<?=$config_url?>" title="" target="_blank"><img src="./images/icons/topnav/mainWebsite.png" alt="" /><span>Vào trang web</span></a></li>
+            <li><a href="http://<?=$config_url?>" title="" target="_blank">
+                <img src="./images/icons/topnav/mainWebsite.png" alt="" /><span>Vào trang web</span></a></li>
             
             <?php /* 
             <li><a href="index.php?com=order&act=man" title=""><img src="./images/icons/topnav/cart.png" 
@@ -29,10 +30,13 @@ $dem_thu = get_result("select count(id) as dem from #_lienhe where type='lienhe'
             <?php phanquyen_menu('Thay đổi thông tin','about','capnhat','thaydoithongtin'); ?> 
             <?php phanquyen_menu('Quản lý thành viên','user','man',''); ?> </ul> </li>
             
-            */?>
             <li><a title="Có <?=$dem_datban[0]['dem']?> chưa đọc" href="index.php?com=lienhe&act=man&type=datban" title=""><img src="images/icons/topnav/messages.png" alt="" /><span>Tư vấn</span><span class="numberTop"><?=$dem_datban[0]['dem']?></span></a></li>
-            <li><a title="Có <?=$dem_thu[0]['dem']?> chưa đọc" href="index.php?com=lienhe&act=man&type=lienhe" title=""><img src="images/icons/topnav/messages.png" alt="" /><span>Thư liên hệ</span><span class="numberTop"><?=$dem_thu[0]['dem']?></span></a></li>
-            <li><a href="index.php?com=user&act=logout" title=""><img src="images/icons/topnav/logout.png" alt="" /><span>Đăng xuất</span></a></li>
+            */?>
+            <li><a title="Có <?=$dem_thu[0]['dem']?> chưa đọc" href="index.php?com=lienhe&act=man&type=lienhe"
+             title=""><img src="images/icons/topnav/messages.png" alt="" /><span>Thư liên hệ</span>
+             <span class="numberTop"><?=$dem_thu[0]['dem']?></span></a></li>
+            <li><a href="index.php?com=user&act=logout" title=""><img src="images/icons/topnav/logout.png"
+             alt="" /><span>Đăng xuất</span></a></li>
         </ul>
     </div>
     <div class="clear"></div>

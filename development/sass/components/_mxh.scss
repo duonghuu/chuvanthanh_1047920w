@@ -23,11 +23,12 @@
         @include grid($display: inline-flex, $justify-content: center,
          $align-items: center);  
 
-        margin-left: 10px;
         @include doubly(){
+            margin-left: 5px;
+
         };
         img{
-            max-height: 36px;
+            max-height: 30px;
             object-fit: scale-down;
             @include transition(all 1s ease);  
             &:hover{
@@ -35,8 +36,7 @@
             }
         }
     }
-    span{
-        @include setFont(15px, #fff, 700, $font-text);
-        display: inline-block;
-    }
+}
+.mxh{
+    @extend %mxh-style;
 }

@@ -1,9 +1,11 @@
 <?php
 //------------ Menu -----------------
+@define ('_tiennghivanoithat','Comfort and interior');
 @define ('_xindungspamwebsitechungtoi','Please do not spam our website!');
 @define ('_visaochochungtoi','Why choose My Nhu services');
 @define ('_daily','Agency');
 @define ('_timkiem','Search');
+@define ('_giathue','Rent cost');
 @define ('_congtytuvanbds','Real estate consulting company');
 @define ('_tourkhuyenmai','<strong>Tour </strong> promotion');
 @define ('_tinvavideo','<strong>News &amp; video </strong> jaya travel');
@@ -117,7 +119,7 @@
 @define ('_nhahang','Restaurant');
 @define ('_trangchu','Home');
 @define ('_gioithieu','About us');
-@define ('_sanpham','Products');
+@define ('_sanpham','Lease');
 @define ('_tintuc','News');
 @define ('_tuyensinh','Tuyển sinh');
 @define ('_sukien','Event');

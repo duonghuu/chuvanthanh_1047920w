@@ -1,17 +1,19 @@
 @media screen 
 	and (min-width: $device_size_mobile)
 	and (max-width: $device_size_small) {
-    @include setHeaderCenter;
+      @include setHeaderCenter;
       @include showMobileMenu;
       @include setIdxTitleSize;
       @include setSlider_SM;
 
       /*========= HOME ===============*/
-      @include setTinNB_SM;
-      @include setViSao_SM;
-      $product-gutter: percentage(30/1330);
+      // @include setTinNB_SM;
+      // @include setViSao_SM;
+      $product-gutter: percentage(20/1200);
       @include setProductColumnMobile($p_col: 6, $p_gutter: $product-gutter);
-      @include setTinVideoFull;
+      @include setProductMobile;
+      @include setNewColumnMobile($p_col: 6, $p_gutter: 2%);
+      // @include setTinVideoFull;
       
       /*========= FOOTER ===============*/
       @include setFooterSmall;

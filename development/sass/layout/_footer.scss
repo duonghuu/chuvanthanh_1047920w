@@ -42,12 +42,14 @@
     width: 100%;
     z-index: 5;
     background-size: cover;
-    background-color: $bg-footer;
     .ft-top{
     }
     .ft-flex {
         @include boxstyle($display: flex, $justify-content: space-between, $align-items: flex-start);
         padding: 40px 0;
+        .ft-col-left{
+            width: percentage(380/1200);
+        }
         .ft-logo { 
                 img{
                     
@@ -55,7 +57,7 @@
         }
         .ft-info {
             position: relative;
-            width: percentage(580/1200);
+            width: percentage(450/1200);
             color: #fff;
         }
 
@@ -65,9 +67,9 @@
         }
 
         .ft-fanpage {
-            width: percentage(340/1200);
+            width: percentage(280/1200);
             .fanpageplace {
-                height: 210px;
+                height: 300px;
                 overflow: hidden;
             }
         }
@@ -120,20 +122,24 @@
     }
 
     .ft-tit {
-        
-        text-transform: uppercase;
-        @include setFont(15px, #fff, 700);
-        strong, span {
-                position: relative;
-                margin-bottom: 40px;
-                display: block;
-                @include p-el(before, $el-width: 40px, $el-height: 3px){
-                  background-color: #fff;
-                  @include absolute($left: 0px, $bottom: -17px);
-            };
-        }
 
-    }
+        text-transform: uppercase;
+        position: relative;
+        @include setFont(18px, #fff, 700);
+        @include p-el(before, $el-width: 115px, $el-height: 1px){
+          background-color: #fff;
+          @include absolute($left: 0px, $bottom: -21px);
+      };
+      strong, span {
+        margin-bottom: 55px;
+        display: block;
+        @include p-el(before, $el-width: 60px, $el-height: 1px){
+          background-color: #fff;
+          @include absolute($left: 0px, $bottom: -23px);
+      };
+  }
+
+}
 
     .ft-logo{
         // @include boxstyle($display: flex, $align-items: center);
@@ -151,9 +157,9 @@
     .copyright {
         position: relative;
         background-color: $bg-copyright;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
         .ft-wrap {
-            min-height: 55px;
-            border-top: 1px solid #03bcff;
+            min-height: 50px;
             @include grid($display: flex, $justify-content: space-between
                 , $align-items: center);
             position: relative;
@@ -171,6 +177,4 @@
 .codebando, .codebando iframe{
     @extend %map-style;
 }
-.mxh{
-    @extend %mxh-style;
-}
+

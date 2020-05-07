@@ -1,7 +1,7 @@
 %hover_menu_color{
     //background: url($images-url+"hover-menu.png") repeat-x;
     color: $color-menu-hover;
-    //background-color: $bg-menu-item-hover;
+    background-color: $bg-menu-item-hover;
 }
 @include keyframes(dropInDown) {
     0% {
@@ -34,7 +34,7 @@
     
     @include relative($left: 0, $right: 0);
     z-index: 449;
-    background-color: $theme-color;
+    background-color: #ffcb0e;
     @include when-inside('.clsindex'){
         
     }
@@ -42,8 +42,6 @@
 .main-nav {
     @include grid($display: flex, $justify-content: space-between, $align-items: center);
     position: relative;
-    min-height: 45px;
-    margin-left: percentage(270/1200);;
     ul{
         @extend %reset-list;
     }
@@ -53,35 +51,42 @@
         z-index: 5;
         position: relative;
         &>li {
-            @include grid($display: flex, $align-items: center, $justify-content: center);
+            @include grid($display: flex, $align-items: center);
+            @include flex(auto);
             position: relative;
             z-index: 5;
-            margin-left: em(80);
             ul{
                 @extend %sub-menu-list;
                 top: 100%;
             }
             @include setTagAHover(#fff,$color-menu-hover);
             &>a {
-                @include boxstyle($display: flex, $align-items: center,
-                    $justify-content: center, $flex-wrap: wrap);
-                @include setFont(15px, #fff, 500);
-                min-height: 45px;
+                @include grid($display: flex, $align-items: center,
+                    $justify-content: center);
+                @include setFont(14px, $theme-color, 900);
+                min-height: 50px;
+                width: 100%;
                 position: relative;
-                text-align: center;
                 text-transform: uppercase;
             }
             
             &:hover {
+                &>a {
+                    @extend %hover_menu_color;
+                }
                 &>ul{
                     display: block;
                 }
             }
             &.active{
                 &>a {
-                    color: $color-menu-hover;
+                    @extend %hover_menu_color;
                 }
             }
+            @include p-el(after, $el-width: 1px, $el-height: 12px){
+              @include background-opacity(#fff, $opacity: 0.4);;
+              right: 0;
+            };
             @include doubly()
             {
                 
@@ -112,7 +117,7 @@
                     @include absolute($top: 0, $right: 5px);
                 }
             }
-            @include setTagAHover(#212121,$theme-color);
+            @include setTagAHover(#212121,#f00);
             &:hover{
                 &>ul{
                     display: block;

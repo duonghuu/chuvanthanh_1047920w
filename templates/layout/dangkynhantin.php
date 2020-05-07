@@ -31,14 +31,16 @@
 
 <div id="dknt">
     <form name="frm_dknt" id="frm_dknt" method="post" autocomplete="false" action="" >
-    	<input type="text" name="fid[hoten_nhantin]" id="hoten_nhantin" class="placeholder-2" 
-    	placeholder="<?=_hovaten?>" />
+    	<?php /* 
+      <input type="text" name="fid[hoten_nhantin]" id="hoten_nhantin" class="placeholder-2" 
+            placeholder="<?=_hovaten?>" /> 
+      */?>
         <input type="text" name="fid[email_nhantin]" id="email_nhantin" class="placeholder-2" 
         placeholder="<?=_nhapemailcuaban?>" />
         <input type="hidden" value="1" name="nltval">
         <input type="hidden" value="<?= time() ?>" name="nlttoken">
         <input type="hidden" name="recaptchaResponse_dknt" id="recaptchaResponse_dknt">
-        <div id="submit_nhantin"><?= _gui ?><?php /* 
+        <div id="submit_nhantin"><?= _dangky ?><?php /* 
         <i class="fas fa-paper-plane"></i> 
         */?></div>
     </form>

@@ -13,9 +13,9 @@
 
 #search {
     width: 100%;
-    max-width: 369px;
+    max-width: 223px;
     z-index: 50;
-    margin-left: 50px;
+    margin-left: 40px;
     &.hien {
         display: block;
     }
@@ -25,25 +25,24 @@
          space-between);
         overflow: hidden;
         background-color: #fff; 
-        border: 1px solid #d9d9d9;
-        border-radius: 5px;
+        border: 1px solid #fff;
+        border-radius: 20px;
         .keyword {
             @include flex(1);
-            @include setFont(0.9em, #333);
+            @include setFont(13px, #333);
             padding: 0px 10px;
             border: 0;
-            height: 45px;
+            height: 36px;
             box-shadow: none;
             background-color: transparent;
         }
 
         .btn_search {
-            @include setFont(16px, #fff);
+            @include setFont(16px, #0e508c);
             @include boxstyle($display: flex, $justify-content: center, 
               $align-items: center);
             cursor: pointer;
-            @include box(53px, 45px);
-            background-color: $theme-color;
+            @include box(36px, 36px);
         }
     }
 

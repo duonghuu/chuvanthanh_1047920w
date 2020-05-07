@@ -56,8 +56,8 @@
     <tr style="text-align:center">
         <td></td>
         <td>STT</td>
-        <td class="sortCol"><div>Tên<span></span></div></td>
         <?php /* 
+        <td class="sortCol"><div>Tên<span></span></div></td>
                          <td class="sortCol"><div>Điện thoại<span></span></div></td> */?>
         <td class="sortCol"><div>Email<span></span></div></td>
         <?php /*         
@@ -70,12 +70,16 @@
     </tr>
     <?php for($i=0, $count=count($items); $i<$count; $i++){?>
         <tr style="text-align:center">
-            <td style="width:3%;" align="center"><input type="checkbox" name="chon" value="<?=$items[$i]['id']?>" class="chon" /></td>  
+            <td style="width:3%;" align="center"><input type="checkbox" name="chon" 
+                value="<?=$items[$i]['id']?>" class="chon" /></td>  
             <td style="width:15%;" align="center">
-             <input data-val0="<?=$items[$i]['id']?>" data-val2="table_<?=$_GET['com']?>" data-val3="stt" onblur="stt(this)" type="text" value="<?=$items[$i]['stt']?>" name="ordering[]" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" class="tipS smallText update_stt" original-title="Nhập số thứ tự bài viết" rel="<?=$items[$i]['id']?>" />
+             <input data-val0="<?=$items[$i]['id']?>" data-val2="table_<?=$_GET['com']?>"
+              data-val3="stt" onblur="stt(this)" type="text" value="<?=$items[$i]['stt']?>"
+               name="ordering[]" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"
+                class="tipS smallText update_stt" original-title="Nhập số thứ tự bài viết" rel="<?=$items[$i]['id']?>" />
          </td>
-         <td style="width:60%;" align="center"><b><?=$items[$i]['ten']?></b></td>
        <?php /*  
+         <td style="width:60%;" align="center"><b><?=$items[$i]['ten']?></b></td>
                         <td  style="width:60%;" align="center"><b><?=$items[$i]['dienthoai']?></b></td>  */?>
          <td  style="width:60%;" align="center"><b><?=$items[$i]['email']?></b></td>
          <?php /* 
@@ -84,7 +88,8 @@
             
           <td style="width:60%;" align="center"><b><?=$items[$i]['noidung']?></b></td>
           */?>
-         <td style="width:20%;"><a href="index.php?com=newsletter&act=delete&id=<?=$items[$i]['id']?>" onClick="if(!confirm('Xác nhận xóa')) return false;"><img src="./images/icons/dark/close.png" alt=""></a></td>
+         <td style="width:20%;"><a href="index.php?com=newsletter&act=delete&id=<?=$items[$i]['id']?>"
+          onClick="if(!confirm('Xác nhận xóa')) return false;"><img src="./images/icons/dark/close.png" alt=""></a></td>
      </tr>
  <?php }?>
 </table>

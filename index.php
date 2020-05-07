@@ -47,7 +47,7 @@ $_SESSION['dong'] = lay_banner('dong');
             <?php 
             include _template."layout/header.php";
             include _template."layout/menu_top.php";
-            // include _template."layout/valak_menu.php";
+            include _template."layout/valak_menu.php";
             include _template."layout/slider.php";
             if($source != "index") echo $bread->display();
             ?>
@@ -67,7 +67,6 @@ $_SESSION['dong'] = lay_banner('dong');
             </div><!---END .main_content-->
         </section>
         <?php 
-        if($source=="index") include _template."layout/doitac.php";
         include _template."layout/footer.php";
         ?>
     </div><!---END .wapper-->
@@ -78,125 +77,15 @@ $_SESSION['dong'] = lay_banner('dong');
     // include _template."layout/chat_facebook.php";
     // include _template."layout/cart_popup.php";
     // if($deviceType=="computer") include _template."layout/phone3.php";
-    // include _template."layout/phone2.php";
+    include _template."layout/phone2.php";
     include _template."layout/phone5.php";
 }else{
     include _template.$template."_tpl.php";
 }
 
     include _template."layout/js.php";
-    include _template."layout/chat_facebook.php";
+    // include _template."layout/chat_facebook.php";
     ?>
-
-    <div class="wrap-yh">
-        <div class="yh-tit"><img src="images/media.png" alt="F"/></div>
-        <div class="yh-box">
-            
-    <div class="lienhekhac1">
-        
-
-
-
-    <div class="bao_form1">
-        <div class="form_d1k">
-            <div class="ten_fo1">Tư vấn</div>
-            <form method="post" name="tung1" class="tung1" action="" enctype="multipart/form-data">
-                <div class="form-group">
-                    <input type="text" name="fpu3[ten]" placeholder="<?= _hovaten ?>" class="form-control">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="fpu3[dienthoai]" placeholder="<?= _dienthoai ?>" class="form-control">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="fpu3[email]" placeholder="<?= _email ?>" class="form-control">
-                </div>
-                <div class="form-group">
-                    <textarea name="fpu3[note]" placeholder="<?= _noidung ?>" class="form-control"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block mb-2">Gửi</button>
-                <input type="hidden" value="1" name="rp3val">
-                <input type="hidden" value="<?= time() ?>" name="rp3token">
-                <input type="hidden" name="recaptcha2" id="recaptcha2">
-                <?php /* 
-                <div class="item_dangky1"><input name="ten_dangky1" type="text" id="ten_dangky1" placeholder="Họ tên" /><div class="clear"></div></div>
-                                <div class="item_dangky1"><input name="dienthoai_dangky1" type="text" id="dienthoai_dangky1" placeholder="Điện thoại" /><div class="clear"></div></div>
-                                <div class="item_dangky1"><input name="email_dangky1" type="text" id="email_dangky1" placeholder="Emai" /><div class="clear"></div></div>
-                                <div class="item_dangky1"><textarea name="noidung_dangky1" class="in_k" placeholder="Nội dung" ></textarea><div class="clear"></div></div>
-                                <div class="item_dangky_k1" >
-                                    <input type="button" value="Gửi" class="click_aj1" style="text-align: center;" />
-                                </div> 
-                */?>
-            </form>
-        </div>
-                <div class="clear"></div>
-    </div>
-
-
-
-    </div>        
-
-    <?php /* 
-    <script type="text/javascript">
-            $(document).ready(function(e) {
-                $('.click_aj1').click(function(){
-                    
-                    if(isEmpty($('#ten_dangky1').val(), "Xin nhập Họ tên"))
-                    {
-                        $('#ten_dangky1').focus();
-                        return false;
-                    }
-                    
-                    if(isEmpty($('#dienthoai_dangky1').val(), "Xin nhập Số điện thoại"))
-                    {
-                        $('#dienthoai_dangky1').focus();
-                        return false;
-                    }
-                    if(isPhone($('#dienthoai_dangky1').val(), "Số điện thoại chưa hợp lệ"))
-                    {
-                        $('#dienthoai_dangky1').focus();
-                        return false;
-                    }
-                    if(isEmpty($('#email_dangky1').val(), "Email không hợp lệ"))
-                    {
-                        $('#email_dangky1').focus();
-                        return false;
-                    }
-                    if(isEmail($('#email_dangky1').val(), "Email không hợp lệ"))
-                    {
-                        $('#email_dangky1').focus();
-                        return false;
-                    }
-                    if(isEmpty($('#capcha1').val(), "Nhập mã bảo về"))
-                    {
-                        $('#capcha1').focus();
-                        return false;
-                    }
-                    
-                    
-                    $.ajax({
-                        type:'post',
-                        url:$(".tung1").attr('action'),
-                        data:$(".tung1").serialize(),
-                        dataType:'json',
-                        beforeSend: function() {
-                            $('.thongbao').html('<p><img src="images/loader_p.gif"></p>');     
-                        },
-                        error: function(){
-                            add_popup('Hệ thống bị lỗi, xin quý khách chuyển sang mục khác.');
-                        },
-                        success:function(kq){
-                            add_popup(kq.thongbao);
-                                
-                        }
-                    });
-                });    
-            });
-        </script> 
-    */?>
-
-</div>
-        <div style="clear:both"></div>
-    </div>
     <?=$company['codethem2']?>
 </body>
 </html>

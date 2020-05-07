@@ -138,17 +138,17 @@ $(document).ready(function() {
     //       'top': vitri + 'px'
     //     })
     //   });
-    // $(window).scroll(function(){
-    //   var cach_top = $(window).scrollTop();
-    //   var heaigt_header = $('.hd-bg').height();
-    //   if(cach_top >= heaigt_header){
-    //     $('.nav-bg').css({position: 'fixed', top: '0px', zIndex:99999});
-    //     $('.nav-bg').addClass('fixed');
-    //   }else{
-    //     $('.nav-bg').css({position: 'relative', top: 'auto'});
-    //     $('.nav-bg').removeClass('fixed');
-    //   }
-    // });
+    $(window).scroll(function(){
+      var cach_top = $(window).scrollTop();
+      var heaigt_header = $('.hd-bg').height();
+      if(cach_top >= heaigt_header){
+        $('.nav-bg').css({position: 'fixed', top: '0px', zIndex:99999});
+        $('.nav-bg').addClass('fixed');
+      }else{
+        $('.nav-bg').css({position: 'relative', top: 'auto'});
+        $('.nav-bg').removeClass('fixed');
+      }
+    });
   }
   
 });

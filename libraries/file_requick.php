@@ -7,17 +7,17 @@ $d = new database($config['database']);
 $company= get_fetch("select *,ten$lang as ten,diachi$lang as diachi,slogan$lang as slogan from #_company limit 0,1");
 $thuoctinh = json_decode($company["thuoctinh"],true);
 $datacom = array(
-	array("tbl"=>"product_danhmuc","field"=>"id_danhmuc","source"=>"product","type"=>"san-pham","com"=>"san-pham"),
-	array("tbl"=>"product_list","field"=>"id_list","source"=>"product","type"=>"san-pham","com"=>"san-pham"),
-	// array("tbl"=>"product_cat","field"=>"id_cat","source"=>"product","type"=>"san-pham","com"=>"san-pham"),
-	array("tbl"=>"product","field"=>"id","source"=>"product","type"=>"san-pham","com"=>"san-pham"),
+	array("tbl"=>"product_danhmuc","field"=>"id_danhmuc","source"=>"product","type"=>"cho-thue","com"=>"cho-thue"),
+	array("tbl"=>"product_list","field"=>"id_list","source"=>"product","type"=>"cho-thue","com"=>"cho-thue"),
+	// array("tbl"=>"product_cat","field"=>"id_cat","source"=>"product","type"=>"cho-thue","com"=>"cho-thue"),
+	array("tbl"=>"product","field"=>"id","source"=>"product","type"=>"cho-thue","com"=>"cho-thue"),
 
 	// array("tbl"=>"news_danhmuc","field"=>"id_danhmuc","source"=>"news","type"=>"cokhi","com"=>"co-khi"),
 	// array("tbl"=>"news_list","field"=>"id_list","source"=>"news","type"=>"cokhi","com"=>"co-khi"),
 	// array("tbl"=>"news_cat","field"=>"id_cat","source"=>"news","type"=>"cokhi","com"=>"co-khi"),
 	// array("tbl"=>"news","field"=>"id","source"=>"news","type"=>"cokhi","com"=>"co-khi"),
 
-	array("tbl"=>"news","field"=>"id","source"=>"news","com"=>"tin-tuc","type"=>"tin-tuc"),
+	array("tbl"=>"news","field"=>"id","source"=>"news","com"=>"tien-ich","type"=>"tien-ich"),
 	array("tbl"=>"about","field"=>"id","source"=>"about","com"=>"lien-he","type"=>"lienhe"),
 	array("tbl"=>"about","field"=>"id","source"=>"about","com"=>"gioi-thieu","type"=>"gioi-thieu"),
 );
@@ -93,10 +93,10 @@ switch($com)
 	$template = isset($_GET['id']) ? "news_detail" : "news";
 	$type_og = isset($_GET['id']) ? "article" : "object";
 	break;
-	case 'huong-dan':
-	$type = "huong-dan";
-	$title = "Hướng dẫn";
-	$title_cat = "Hướng dẫn";
+	case 'tien-ich':
+	$type = "tien-ich";
+	$title = _tiennghivanoithat;
+	$title_cat = _tiennghivanoithat;
 	$title_other = _tinlienquan;
 	$source = "news";
 	$template = isset($_GET['id']) ? "news_detail" : "news";
@@ -139,17 +139,17 @@ switch($com)
 	$type_og = "article";
 	break;
 	case 'tim-kiem':
-	$type = "san-pham";
+	$type = "cho-thue";
 	$title = _ketquatimkiem;
 	$title_cat = _ketquatimkiem;
 	$source = "search";
 	$template = "product";
 	break;
-	case 'san-pham':
-	$type = "san-pham";
+	case 'cho-thue':
+	$type = "cho-thue";
 	$title = _sanpham;
 	$title_cat = _sanpham;
-	$title_other = _sanphamkhac;
+	$title_other = _tinlienquan;
 	$source = "product";
 	$template = isset($_GET['id']) ? "product_detail" : "product";
 	$type_og = isset($_GET['id']) ? "article" : "object";

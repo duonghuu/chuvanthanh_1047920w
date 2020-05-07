@@ -1,59 +1,41 @@
 @media screen 
 	and (max-width: $device_size_mobile) {
-        @include setHeaderCenter{
-                .hd-bot{
-                  &-flex{
-                        @include justify-content(center);
-                  }
-          }
-        };
+        @include setHeaderCenter;
           @include showMobileMenu;
-          @include setIdxTitleSize{
-                .idx-tit {
-                      h4 {
-                          @include font-size(22);
-                      }
-                  }
-          };
+          @include setIdxTitleSize;
           @include setSlider_SM;
           /*========= HOME ===============*/
-          @include setTinNB_SM;
-          @include setViSao_SM{
-                .visao .visao-box ul li h4{
-                      @include font-size(16);  
-                }
+        //   @include setTinNB_SM;
+        //   @include setViSao_SM{
+        //         .visao .visao-box ul li h4{
+        //               @include font-size(16);  
+        //         }
+        //   };
+          @include setProductColumnMobile($p_col: 12, $p_gutter: 0){
+            
           };
-          $product-gutter: percentage(30/1330);
-          @include setProductColumnMobile($p_col: 6, $p_gutter: $product-gutter){
-                .pr-box article .info p {
-                        font-size: 13px;
-                        span{
-                                font-size: 14px;
-                        }
-                }
-          };
-          @include setTinVideoFull;
-          @include setThuVien_MB{
+        //   @include setTinVideoFull;
+        //   @include setThuVien_MB{
 
-          };
+        //   };
           @include setProductMobile;
           @include setNewColumnMobile($p_col: 12);  
-          .tin-video .tinnb-main .tinnb-item a .info{
-                h5{
-                        margin-top: 0;
-                }
-                .postdate{
-                        display: none;
-                }
-        } 
-        .themanh-item {
-                article{
-                        @include justify-content(center);
-                        .info{
-                                @include flex(unset);
-                        }
-                }
-        }
+        //   .tin-video .tinnb-main .tinnb-item a .info{
+        //         h5{
+        //                 margin-top: 0;
+        //         }
+        //         .postdate{
+        //                 display: none;
+        //         }
+        // } 
+        // .themanh-item {
+        //         article{
+        //                 @include justify-content(center);
+        //                 .info{
+        //                         @include flex(unset);
+        //                 }
+        //         }
+        // }
           
           /*========= FOOTER ===============*/
           @include setFooterSmall{
