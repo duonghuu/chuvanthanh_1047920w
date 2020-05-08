@@ -48,9 +48,11 @@ function save_gioithieu(){
 		$file_name = images_name($_FILES['file'.$key]['name']);		
 		if($photo = upload_image("file".$key, _format_duoihinh,_upload_hinhanh,$file_name)){
 			$data['photo'.$key] = $photo;
-			if(_width_thumb > 0 and _height_thumb > 0)
-			    $data['thumb'] = create_thumb($data['photo'], _width_thumb, 
+			if(_width_thumb > 0 and _height_thumb > 0){
+			    $data['thumb'] = create_thumb($data['photo'.$key], _width_thumb, 
 			        _height_thumb, _upload_hinhanh,$file_name,_style_thumb,_extension_thumb);
+			    
+			}
 			$d->reset();			
 			$d->setTable('background');			
 			$d->setWhere('type', $_POST['type']);			

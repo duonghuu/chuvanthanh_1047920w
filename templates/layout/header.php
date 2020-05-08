@@ -19,7 +19,9 @@
     <div class="container">
       <div class="d-flex">
         <a href="" class="hd-bot__left" >
+          <?php if($logolang["hienthi"]>0){ ?>
           <img src="<?= _upload_hinhanh_l.$logolang["photo"] ?>" alt="logo">
+        <?php } ?>
           <div>
             <h5><?= $logolang["ten"] ?></h5>
             <p><?= $logolang["mota"] ?></p>

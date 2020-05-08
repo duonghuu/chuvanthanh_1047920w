@@ -10013,7 +10013,8 @@ div.wap_item {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  min-height: 110px; }
   .hd-bg .hd-bot__left img {
     height: 110px; }
   .hd-bg .hd-bot__left div {
