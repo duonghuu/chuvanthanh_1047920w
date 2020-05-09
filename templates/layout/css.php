@@ -22,9 +22,11 @@
 <?php /* <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="main.css"> */?>
 <link rel="stylesheet" type="text/css" href="main.css">
+<?php /* 
 <?php if($template == "product_detail"){ ?>
 <link rel="stylesheet" media="screen" href="css/magiczoomplus/magiczoomplus.css">
-<?php } ?>
+<?php } ?> 
+*/?>
 <?php if($config['reponsive']==true) { ?>
   <?php /* <link rel="stylesheet" href="css/mobile.css"> */?>
 <?php } ?>

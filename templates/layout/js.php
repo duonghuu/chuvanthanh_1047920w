@@ -1,6 +1,4 @@
 <h1 style="position:absolute; top:-1000px;"><?php if($h1!='')echo $h1;else echo $company['h1'];?></h1>
-<h2 style="position:absolute; top:-1000px;"><?php if($h2!='')echo $h2;else echo $company['h2'];?></h2>
-<h3 style="position:absolute; top:-1000px;"><?php if($h3!='')echo $h3;else echo $company['h3'];?></h3>
 <div id="fb-root"></div>
 <script src="//code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="js/jquery-3.4.1.min.js"><\/script>')</script>

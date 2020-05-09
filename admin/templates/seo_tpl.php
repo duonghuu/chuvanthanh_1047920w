@@ -31,18 +31,20 @@
    </div>
    <div class="clear"></div>
  </div>
+ <?php /* 
  <div class="formRow">
-   <label>H2</label>
-   <div class="formRight">
-     <input type="text" value="<?=@$item['h2']?>" name="h2" title="" class="tipS" />
-   </div>
-   <div class="clear"></div>
- </div>
- <div class="formRow">
-   <label>H3</label>
-   <div class="formRight">
-     <input type="text" value="<?=@$item['h3']?>" name="h3" title="" class="tipS" />
-   </div>
-   <div class="clear"></div>
- </div>
+    <label>H2</label>
+    <div class="formRight">
+      <input type="text" value="<?=@$item['h2']?>" name="h2" title="" class="tipS" />
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="formRow">
+    <label>H3</label>
+    <div class="formRight">
+      <input type="text" value="<?=@$item['h3']?>" name="h3" title="" class="tipS" />
+    </div>
+    <div class="clear"></div>
+  </div> 
+ */?>
 </div>
